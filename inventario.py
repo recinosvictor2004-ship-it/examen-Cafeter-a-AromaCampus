@@ -6,7 +6,6 @@ def get_next_id(coffees):
     if not coffees:
         return 1
     return max(c["id"] for c in coffees) + 1
-
 def eliminar_cafe(cafe_id):
     coffees = load_coffees()
     new_list = [c for c in coffees if c["id"] != cafe_id]
